@@ -1,0 +1,21 @@
+<div class="page-title">
+  <h4>Аналитика</h4>
+</div>
+
+<div [style.display]="loading ? 'none' : 'block'">
+  <div class="average-price">
+    <p>Средний чек <strong>{{average}} р.</strong></p>
+  </div>
+
+  <div class="analytics-block pb3">
+    <h5>Выручка</h5>
+    <canvas #gainChartRef></canvas>
+  </div>
+
+  <div class="analytics-block">
+    <h5>Заказы</h5>
+    <canvas #orderChartRef></canvas>
+  </div>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>
